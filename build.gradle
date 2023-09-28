@@ -19,6 +19,7 @@ dependencies {
     implementation("io.micronaut.data:micronaut-data-mongodb")
     implementation("io.micronaut.mongodb:micronaut-mongo-sync")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
+    implementation("com.amazonaws:aws-lambda-java-core")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.mongodb:mongodb-driver-sync")
     testImplementation("io.micronaut:micronaut-http-client")
@@ -27,7 +28,7 @@ dependencies {
 
 
 application {
-    mainClass.set("com.kuber.trailer.Application")
+    mainClass.set("com.kuber.trailer.LambdaProxy")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("17")
