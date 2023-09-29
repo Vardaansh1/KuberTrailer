@@ -17,7 +17,7 @@ phases:
       - echo "Post-build phase"
       # Add any post-build commands here, e.g., running tests
 artifacts:
-  files: app/build/libs/* # Adjust the path to your Lambda deployment package
+  files: build/libs/* # Adjust the path to your Lambda deployment package
   discard-paths: yes
 cache:
   paths:
