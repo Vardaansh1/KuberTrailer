@@ -11,14 +11,18 @@ phases:
   build:
     commands:
       - echo "Build phase"
-      - ./gradlew build # Use the appropriate build command for your Java project
+      - ./gradlew clean buildZip
+      - sam package
+        --template-file template.yml
+        --output-template-file package.yml
+        --s3-bucket kuber-trailer-deploy-102517791780
   post_build:
     commands:
       - echo "Post-build phase"
       # Add any post-build commands here, e.g., running tests
 artifacts:
   files:
-    - build/libs/* # Adjust the path to your Lambda deployment package
+    - package.yml # Adjust the path to your Lambda deployment package
   discard-paths: yes
 cache:
   paths:

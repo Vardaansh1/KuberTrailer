@@ -56,5 +56,12 @@ micronaut {
     }
 }
 
+task buildZip(type: Zip) {
+    into('lib') {
+        from(jar)
+        from(configurations.runtimeClasspath)
+    }
+}
+
 
 
