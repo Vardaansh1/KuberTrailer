@@ -19,7 +19,6 @@ phases:
 artifacts:
   files:
     - build/libs/* # Adjust the path to your Lambda deployment package
-    - appspec.yml
   discard-paths: yes
 cache:
   paths:
