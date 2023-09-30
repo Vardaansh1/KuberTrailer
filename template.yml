@@ -12,7 +12,7 @@ Resources:
       Runtime: java17
       # Instructs your myDateTimeFunction is published to an alias named "live".
       AutoPublishAlias: live
-      CodeUri: build/distributions/KuberTrailerLambda.zip
+      CodeUri: build/distributions/KuberTrailer-0.1.zip
       Timeout: 60
       MemorySize: 512
       DeploymentPreference:
