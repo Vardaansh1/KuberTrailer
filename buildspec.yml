@@ -12,6 +12,7 @@ phases:
     commands:
       - echo "Build phase"
       - ./gradlew clean buildZip
+      - echo "Starting SAM package"
       - sam package
         --template-file template.yml
         --output-template-file package.yml
